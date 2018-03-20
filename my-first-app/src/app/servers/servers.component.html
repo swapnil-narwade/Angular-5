@@ -1,3 +1,7 @@
-<p>
-  servers works!
-</p>
+<p>  welcome to the <span>{{ website }}</span>. Your name is {{ getname() }}
+  and lastname is <span>{{ lastname }}</span>. </p>
+<p>Your Id is <span>{{ idNuber }}</span> </p>
+<button class="btn btn-primary" [disabled]="!allowUser"
+(click) = "onClickRun()" >Click Me</button>
+<p [innerText] = "!allowUser"></p>  <!-- innerText is a typescript or javascript property-->
+<p>{{paragraph}}</p>
