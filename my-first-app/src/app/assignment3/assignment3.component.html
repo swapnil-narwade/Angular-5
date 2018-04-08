@@ -1,0 +1,11 @@
+<p style="text-align:center">
+<button class="btn btn-primary" type="button" style="justify-content: center;"
+(click)="onClickButton()">Display details</button>
+</p>
+<p *ngIf = "displayParagraph">Hello, This paragraph will be display after clicking the button</p>
+<input type="text" class="form-control"  [(ngModel)] ="enterText" >
+<p *ngIf ="enterText !='swapnil';else enterText3" >{{enterText}}</p>
+<ng-template #enterText3>
+<input type="text" class="form-control" [(ngModel)] = "enterText2">
+</ng-template>
+<p>{{enterText2 +" " + enterText}}</p>
